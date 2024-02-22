@@ -48,7 +48,6 @@
 </head>
 <body>
 <header>
-    <?= $content ?>
         <footer>
         <nav class="navbar navbar-expand-sm bg-primary navbar-dark fixed-bottom">
             <div class="d-flex" style="height:5px;">
