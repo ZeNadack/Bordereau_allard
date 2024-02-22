@@ -64,4 +64,8 @@ if (isset($_POST['BtnAjoutAssoc']) && $_POST['BtnAjoutAssoc'] == 'Ajout' && isse
         echo $e->getMessage();
     }
 }
+
+if (isset($_POST['btnfraisdeplacement']) && $_POST['btnfraisdeplacement'] == "Frais déplacement") {
+    header('Location: FraisDeplacement.php');
+}
 ?>

@@ -31,6 +31,10 @@ Votre email est : <?php echo $_SESSION['mail'] ?>
     <button type="submit" name="BtnAjoutAssoc" value="Ajout">Ajouter association</button>
 </form>
 
+<form method="" action="../Controller/FraisDeplacement.php">
+    <button type="submit" name="btnfraisdeplacement" value="Frais déplacement">Frais déplacement</button>
+</form>
+
 <?php
 $content=ob_get_clean();
 include('..\View\template.php');
