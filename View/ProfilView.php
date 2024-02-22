@@ -12,6 +12,16 @@ $serveur="localhost";
     $base="m2lallardblanchardhuberdauxhaddad";
 ?>
 <?php
+if (isset($_POST['ModifInfo']))
+    {
+        try{
+            $pdo = new PDO("mysql:host=" . $serveur . ";dbname=" . $base, $nom, $motdepasse);
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+
+        }
+
+    }
 if (isset($_POST['SuppAssociation']) && $_POST['SuppAssociation'] == 'SuppAssociation' && isset($_POST['Association'])) {
     try {
         $pdo = new PDO("mysql:host=" . $serveur . ";dbname=" . $base, $nom, $motdepasse);
@@ -60,7 +70,7 @@ if (isset($_POST['SuppAssociation']) && $_POST['SuppAssociation'] == 'SuppAssoci
         echo '<input type="text" name="" value="' . $unnom . '">';
         ?>
         </br>
-        Prénom                   
+        Prénom
         <?php
         $leprenom = "SELECT prenom FROM adherent WHERE adressemail = '" .$_SESSION['mail']. "'";
         $final = $pdo->query($leprenom);
