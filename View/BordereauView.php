@@ -9,8 +9,9 @@ $soustitle = "sous-titre";
 ?>
 
 <div class="bordereau-form">
-    <div class="bordereau-img">
-    </div>
+
+    <img src="../img/banner.png" class="saut">
+
     <div class="bordereau-infos">
         <form name="FormBordereau" action="" method="POST">
             <label> Je soussigné(e) </label>
@@ -74,10 +75,20 @@ $soustitle = "sous-titre";
             <img src="../img/footer.png" class="saut">
         </form>
     </div>
-    <button class="hide btnpdf" onclick="window.print()">Enregistrer en PDF</button>
+    <button class="btnpdf" onclick="hideButton(this), window.print(), showButton(this)">Enregistrer en PDF</button>
 </div>
 
+<script>
+    function hideButton(x)
+        {
+            x.style.display = 'none';
+        }
 
+    function showButton(x)
+        {
+            x.style.display = 'block';
+        }
+</script>
 
 <?php
 include('..\View\template.php');
