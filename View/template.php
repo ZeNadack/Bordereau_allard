@@ -29,6 +29,9 @@
           <li class="nav-item">         
             <a class="nav-link" href="Bordereau.php">Bordereau</a>
           </li>
+          <li class="nav-item">         
+            <a class="nav-link" href="ListeFrais.php">ListeFrais</a>
+          </li>
         </ul>
       </div>
     </div>

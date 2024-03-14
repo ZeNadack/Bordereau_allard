@@ -42,14 +42,17 @@ if (isset($_POST['BtnAjoutAssoc']) && $_POST['BtnAjoutAssoc'] == 'Ajout' && isse
         $stmt->execute();
         $idadherent = $stmt->fetchColumn();
 
+
+        $ndelicence = $_POST['ndelicence'];
         // Commencer la transaction
         $pdo->beginTransaction();
 
         // Insérer la relation dans la table correspondre
-        $queryInsert = "INSERT INTO correspondre (idadherent, idassociation) VALUES (:idadherent, :idassociation)";
+        $queryInsert = "INSERT INTO correspondre (idadherent, idassociation, ndelicence) VALUES (:idadherent, :idassociation, :ndelicence)";
         $stmtInsert = $pdo->prepare($queryInsert);
         $stmtInsert->bindParam(':idadherent', $idadherent);
         $stmtInsert->bindParam(':idassociation', $idassociation);
+        $stmtInsert->bindParam(':ndelicence', $ndelicence);
         $stmtInsert->execute();
 
         // Valider la transaction

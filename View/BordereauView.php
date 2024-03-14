@@ -1,6 +1,6 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../CSS/Style.css">
 <?php
 $titlepage="Bordereau";
 $style="";
@@ -8,7 +8,7 @@ $title = "Bordereau";
 $soustitle = "sous-titre";
 ?>
 
-<div class="bordereau-form">
+<div class="bordereau">
 
     <img src="../img/banner.png" class="saut">
 
@@ -27,7 +27,7 @@ $soustitle = "sous-titre";
             <label> en tant que don. </label>
             </br>
 
-            <table class="saut">
+            <table class="saut bordereau-table">
                 <tr>
                     <th>Motif</th>
                     <th>Trajet</th>
@@ -69,13 +69,14 @@ $soustitle = "sous-titre";
 
             <label> Signature du bénévole: </label>
             </br>
-            <textarea class="saut"></textarea>
+            <textarea readonly class="saut"></textarea>
             </br>
 
             <img src="../img/footer.png" class="saut">
         </form>
     </div>
     <button class="btnpdf" onclick="hideButton(this), window.print(), showButton(this)">Enregistrer en PDF</button>
+</br></br></br>
 </div>
 
 <script>
