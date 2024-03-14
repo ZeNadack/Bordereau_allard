@@ -32,6 +32,5 @@ Votre email est : <?php echo $_SESSION['mail'] ?>
 </form>
 
 <?php
-$content=ob_get_clean();
 include('..\View\template.php');
 ?>
