@@ -22,7 +22,7 @@
     $servername = 'localhost';
     $username = 'root';
     $password = 'SxdoRDXjkmQ0YJhI';
-    $database = 'm2lallardblanchardhuberdauxhaddad';
+    $database = 'm2lratt';
 
     // On établit la connexion
     $conn = new mysqli($servername, $username, $password, $database);
@@ -33,7 +33,7 @@
     }
 
     $req = "SELECT DateD, Motif, Trajet, Km_parcouru, Cout_trajet, Peages, Repas, Hebergement 
-            FROM borderau";
+            FROM deplacement";
 
     $result = $conn->query($req);
 

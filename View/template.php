@@ -19,7 +19,7 @@
       <div class="vr"></div>
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="Accueil.php">Accueil<span class="sr-only">(Page actuelle)</span></a>
+            <a class="nav-link" href="Accueil.php">Accueil<span class="sr-only"></span></a>
           </li>
           <div class="vr"></div>
           <li class="nav-item">
@@ -27,7 +27,10 @@
           </li>
           <div class="vr"></div>
           <li class="nav-item">         
-            <a class="nav-link" href="#">Bordereau</a>
+            <a class="nav-link" href="Bordereau.php">Bordereau</a>
+          </li>
+          <li class="nav-item">         
+            <a class="nav-link" href="ListeFrais.php">ListeFrais</a>
           </li>
         </ul>
       </div>
@@ -48,7 +51,6 @@
 </head>
 <body>
 <header>
-    <?= $content ?>
         <footer>
         <nav class="navbar navbar-expand-sm bg-primary navbar-dark fixed-bottom">
             <div class="d-flex" style="height:5px;">

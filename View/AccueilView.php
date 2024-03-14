@@ -7,31 +7,29 @@ $soustitle = "sous-titre";
 ob_start();
 ?>
 
-<form action = "" method="POST">
-Votre email est : <?php echo $_SESSION['mail'] ?>
-<button type="submit" name="BtnDeconnexion" value="Deconnexion">Deconnexion</button>
-</form>
+<form action="" method="POST" class="top">
+    <button type="submit" name="BtnDeconnexion" value="Deconnexion">Deconnexion</button>
+
+    <label for="assoc">Selectionnez votre/vos associations :</label>
+    <select name="assoc" id="assoc">
+        <?php
+        $connect = Connexion();
+
+        $sql = 'SELECT idassociation, nomligue FROM association';
+
+        $resultat = $connect->query($sql);
+        while ($association = $resultat->fetch()) {
+            echo '<option value="' . $association['idassociation'] . '">' . $association['nomligue'] . '</option>';
+        }
+        ?>
+    </select>
+    <label for="ndelicence">N° de licence</label>
+    <input type="text" name="ndelicence" id="ndelicence">
 
 
-<label for="assoc">Selectionnez votre/vos associations :</label>
-
-<select name="assoc" id="assoc">
-    <?php
-    $connect = Connexion();
-
-    $sql = 'SELECT idassociation, nomligue FROM association';
-
-    $resultat = $connect->query($sql);
-    while ($association = $resultat->fetch()) {
-        echo '<option value="' . $association['idassociation'] . '">' . $association['nomligue'] . '</option>';
-    }
-    ?>
-</select>
-<form name="listeajout" action="" method="POST">
     <button type="submit" name="BtnAjoutAssoc" value="Ajout">Ajouter association</button>
 </form>
 
 <?php
-$content=ob_get_clean();
 include('..\View\template.php');
 ?>

@@ -24,8 +24,6 @@ ob_start();
 
 </br>
 
-<button type="" name="BtnMDPOublie" value="">oublie mot de passe</button>
-
 <?php
 $content=ob_get_clean();
 include('..\View\templateAccueil.php');
