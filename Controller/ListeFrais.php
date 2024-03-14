@@ -1,3 +1,17 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste Frais de Déplacement</title>
+    <link href="../CSS/Style.css" rel="stylesheet" type="text/css" />
+</head>
+<header>
+    <button class="BoutonA"><a href="Accueil.php">Retour à l'accueil principal</a></button>
+    <h2 class="Titre">Liste des Frais de Déplacement<h2>
+</header>
+<br><br><br><br><br><br><br><br>
+<body>
 <?php
 session_start(); // Démarrez la session
 
@@ -32,21 +46,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['depla'])) {
     $req->close();
 }
 ?>
-
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liste Frais de Déplacement</title>
-    <link href="../CSS/Style.css" rel="stylesheet" type="text/css" />
-</head>
-<header>
-    <button class="BoutonA"><a href="Accueil.php">Retour à l'accueil principal</a></button>
-    <h2 class="Titre">Liste des Frais de Déplacement<h2>
-</header>
-<br><br><br><br><br><br><br><br>
-<body>
     <?php
     // Requête SQL pour récupérer les frais de déplacement
     $req = "SELECT Iddeplacement, DateD, Motif, Trajet, Km_parcouru, Cout_trajet, Peages, Repas, Hebergement 

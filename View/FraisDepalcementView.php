@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+<link rel="stylesheet" href="../CSS/Style.css">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <style><?php echo $style; ?></style>
 </head>
+<header>
+    <button class="BoutonA"><a href="Accueil.php">Retour à l'accueil principal</a></button>
+    <h2 class="Titre">Liste des Frais de Déplacement<h2>
+</header>
+<br><br><br><br><br><br><br><br>
 <body>
 
 <!-- Formulaire d'ajout de frais de déplacement -->
@@ -94,8 +100,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['DateD']) && isset($_PO
 </form>
 
 <form method="GET" action="">
-    <button type="submit" name="btnvueensemble" value="Vue d'ensemble">Vue d'ensemble</button>
+    <button class="BoutonA"><a href="ListeFrais.php">Vue d'ensemble</a></button>
 </form>
-
 </body>
+<footer>
+    <p>ALLARD Théo, BLANCHARD Théo, HUBERDAUX-Adrien, HADDAD Ryad</p>
+</footer>
 </html>
